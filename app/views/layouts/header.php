@@ -12,7 +12,7 @@ use yii\helpers\Url;
             <div class="row d-flex justify-content-between align-items-center">
                 <div class="dlab-topbar-left">
                     <ul>
-                        <li><a href="javascript:void(0);"><i class="fa fa-envelope-o m-r5 tetx-primary"></i>info@example.com</a></li>
+                        <li><a href="javascript:void(0);"><i class="fa fa-envelope-o m-r5 tetx-primary"></i><?= Yii::$app->params['senderEmail']?></a></li>
 
                     </ul>
                 </div>

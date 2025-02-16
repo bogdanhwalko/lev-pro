@@ -52,12 +52,12 @@ $this->params['breadcrumbs'][] = $this->title;
                         <li>
                             <i class="fa fa-envelope-o"></i>
                             <h4 class="title">Email</h4>
-                            <p>info@example.com</p>
+                            <p><?= Yii::$app->params['senderEmail']?></p>
                         </li>
                         <li>
                             <i class="fa fa-phone"></i>
                             <h4 class="title">Phone</h4>
-                            <p>+61 3 8376 6284<br/>+23 123 456 7890</p>
+                            <p><?= Yii::$app->params['phoneSupport']?></p>
                         </li>
                     </ul>
                 </div>
@@ -131,10 +131,10 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="container">
             <div class="row spno">
                 <div class="col-sm-6 col-6">
-                    <a href="#"><i class="las la-envelope-open"></i>Email: info@example.com</a>
+                    <a href="#"><i class="las la-envelope-open"></i>Email: <?= Yii::$app->params['senderEmail']?></a>
                 </div>
                 <div class="col-sm-6 col-6 text-right">
-                    <a href="#">Support: 0800-123456<i class="las la-phone-volume"></i></a>
+                    <a href="#">Support: <?= Yii::$app->params['phoneSupport']?><i class="las la-phone-volume"></i></a>
                 </div>
             </div>
         </div>

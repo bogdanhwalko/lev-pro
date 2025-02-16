@@ -270,101 +270,9 @@ $this->title = 'Lev Pro Construction';
             </div>
         </div>
         <!-- Our Services END -->
-        <!-- Team -->
-        <div class="section-full bg-white content-inner" id="team">
-            <div class="container">
-                <div class="section-head text-center">
-                    <h5 class="title-small">OUR EXPERTS</h5>
-                    <div class="dlab-separator-outer">
-                        <div class="dlab-separator bg-primary style-skew"></div>
-                    </div>
-                    <h2 class="title">Meet The Team</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
-                        <div class="dlab-box m-b30 dlab-team9">
-                            <div class="dlab-media dlab-media-right">
-                                <a href="javascript:void(0);">
-                                    <img alt="" src="images/our-team/pic7.jpg">
-                                </a>
-                                <div class="dlab-info-has">
-                                    <ul class="dlab-social-icon">
-                                        <li><a class="site-button fa fa-facebook" href="javascript:void(0);"></a></li>
-                                        <li><a class="site-button fa fa-twitter" href="javascript:void(0);"></a></li>
-                                        <li><a class="site-button fa fa-linkedin" href="javascript:void(0);"></a></li>
-                                        <li><a class="site-button fa fa-pinterest" href="javascript:void(0);"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="clearfix">
-                                    <h4 class="dlab-title"><a href="javascript:void(0);">Nashid Martines</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s">
-                        <div class="dlab-box m-b30 dlab-team9">
-                            <div class="dlab-media dlab-media-right">
-                                <a href="javascript:void(0);">
-                                    <img alt="" src="images/our-team/pic4.jpg">
-                                </a>
-                                <div class="dlab-info-has">
-                                    <ul class="dlab-social-icon">
-                                        <li><a class="site-button fa fa-facebook" href="javascript:void(0);"></a></li>
-                                        <li><a class="site-button fa fa-twitter" href="javascript:void(0);"></a></li>
-                                        <li><a class="site-button fa fa-linkedin" href="javascript:void(0);"></a></li>
-                                        <li><a class="site-button fa fa-pinterest" href="javascript:void(0);"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="clearfix">
-                                    <h4 class="dlab-title"><a href="javascript:void(0);">Konne Backfield</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
-                        <div class="dlab-box m-b30 dlab-team9">
-                            <div class="dlab-media dlab-media-right">
-                                <a href="javascript:void(0);">
-                                    <img alt="" src="images/our-team/pic5.jpg">
-                                </a>
-                                <div class="dlab-info-has">
-                                    <ul class="dlab-social-icon">
-                                        <li><a class="site-button fa fa-facebook" href="javascript:void(0);"></a></li>
-                                        <li><a class="site-button fa fa-twitter" href="javascript:void(0);"></a></li>
-                                        <li><a class="site-button fa fa-linkedin" href="javascript:void(0);"></a></li>
-                                        <li><a class="site-button fa fa-pinterest" href="javascript:void(0);"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="clearfix">
-                                    <h4 class="dlab-title"><a href="javascript:void(0);">Hackson Willingham</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.8s">
-                        <div class="dlab-box m-b30 dlab-team9">
-                            <div class="dlab-media dlab-media-right">
-                                <a href="javascript:void(0);">
-                                    <img alt="" src="images/our-team/pic6.jpg">
-                                </a>
-                                <div class="dlab-info-has">
-                                    <ul class="dlab-social-icon">
-                                        <li><a class="site-button fa fa-facebook" href="javascript:void(0);"></a></li>
-                                        <li><a class="site-button fa fa-twitter" href="javascript:void(0);"></a></li>
-                                        <li><a class="site-button fa fa-linkedin" href="javascript:void(0);"></a></li>
-                                        <li><a class="site-button fa fa-pinterest" href="javascript:void(0);"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="clearfix">
-                                    <h4 class="dlab-title"><a href="javascript:void(0);">Konne Backfield</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Team END -->
+
+        <?= $this->render('team'); ?>
+
         <!-- Testimonial -->
         <div class="section-full content-inner-2 bg-primary" id="client" style="background-image:url(images/pattern/pt5.png);">
             <div class="container">
@@ -584,7 +492,7 @@ $this->title = 'Lev Pro Construction';
                     <div class="item">
                         <div class="blog-post style1 blog-grid ">
                             <div class="dlab-post-media dlab-img-effect">
-                                <a href="blog-single.html"><img src="images/blog/grid/construct/pic3.jpg" alt=""></a>
+                                <a href=""><img src="images/blog/grid/construct/pic3.jpg" alt=""></a>
                                 <div class="dlab-post-meta">
                                     <ul>
                                         <li class="post-date"> <strong>10 </strong> <span>Aug 2020</span> </li>
@@ -594,13 +502,13 @@ $this->title = 'Lev Pro Construction';
                             </div>
                             <div class="dlab-info">
                                 <ul class="categories">
-                                    <li><a href="blog-list-1.html">Electricity</a></li>
+                                    <li><a href="">Electricity</a></li>
                                 </ul>
                                 <div class="dlab-post-title ">
-                                    <h3 class="post-title"><a href="blog-single.html">Creating quality urban lifestyles, building stronger.</a></h3>
+                                    <h3 class="post-title"><a href="">Creating quality urban lifestyles, building stronger.</a></h3>
                                 </div>
                                 <div class="dlab-post-readmore">
-                                    <a href="blog-single.html" class="site-button white align-self-center ml-auto half-btn">
+                                    <a href="" class="site-button white align-self-center ml-auto half-btn">
                                         <span>Read More</span>
                                     </a>
                                 </div>
@@ -610,7 +518,7 @@ $this->title = 'Lev Pro Construction';
                     <div class="item">
                         <div class="blog-post style1 blog-grid">
                             <div class="dlab-post-media dlab-img-effect">
-                                <a href="blog-single.html"><img src="images/blog/grid/construct/pic2.jpg" alt=""></a>
+                                <a href=""><img src="images/blog/grid/construct/pic2.jpg" alt=""></a>
                                 <div class="dlab-post-meta">
                                     <ul>
                                         <li class="post-date"> <strong>10 </strong> <span>Aug 2020</span> </li>
@@ -620,13 +528,13 @@ $this->title = 'Lev Pro Construction';
                             </div>
                             <div class="dlab-info">
                                 <ul class="categories">
-                                    <li><a href="blog-list-1.html">Construction</a></li>
+                                    <li><a href="">Construction</a></li>
                                 </ul>
                                 <div class="dlab-post-title ">
-                                    <h3 class="post-title"><a href="blog-single.html">We’ll nail your next project, because nobody wants!</a></h3>
+                                    <h3 class="post-title"><a href="">We’ll nail your next project, because nobody wants!</a></h3>
                                 </div>
                                 <div class="dlab-post-readmore">
-                                    <a href="blog-single.html" class="site-button white align-self-center ml-auto half-btn">
+                                    <a href="" class="site-button white align-self-center ml-auto half-btn">
                                         <span>Read More</span>
                                     </a>
                                 </div>
@@ -636,7 +544,7 @@ $this->title = 'Lev Pro Construction';
                     <div class="item">
                         <div class="blog-post style1 blog-grid">
                             <div class="dlab-post-media dlab-img-effect">
-                                <a href="blog-single.html"><img src="images/blog/grid/construct/pic4.jpg" alt=""></a>
+                                <a href=""><img src="images/blog/grid/construct/pic4.jpg" alt=""></a>
                                 <div class="dlab-post-meta">
                                     <ul>
                                         <li class="post-date"> <strong>10 </strong> <span>Aug 2020</span> </li>
@@ -646,13 +554,13 @@ $this->title = 'Lev Pro Construction';
                             </div>
                             <div class="dlab-info">
                                 <ul class="categories">
-                                    <li><a href="blog-list-1.html">Renovation</a></li>
+                                    <li><a href="">Renovation</a></li>
                                 </ul>
                                 <div class="dlab-post-title ">
-                                    <h3 class="post-title"><a href="blog-single.html">Helping you and your house become better.</a></h3>
+                                    <h3 class="post-title"><a href="">Helping you and your house become better.</a></h3>
                                 </div>
                                 <div class="dlab-post-readmore">
-                                    <a href="blog-single.html" class="site-button white align-self-center ml-auto half-btn">
+                                    <a href="" class="site-button white align-self-center ml-auto half-btn">
                                         <span>Read More</span>
                                     </a>
                                 </div>
@@ -667,10 +575,10 @@ $this->title = 'Lev Pro Construction';
             <div class="container">
                 <div class="row spno">
                     <div class="col-sm-6 col-6">
-                        <a href="#"><i class="las la-envelope-open"></i>Email: info@example.com</a>
+                        <a href="#"><i class="las la-envelope-open"></i>Email: <?= Yii::$app->params['senderEmail']?></a>
                     </div>
                     <div class="col-sm-6 col-6 text-right">
-                        <a href="#">Support: 0800-123456<i class="las la-phone-volume"></i></a>
+                        <a href="#">Support: <?= Yii::$app->params['phoneSupport']?><i class="las la-phone-volume"></i></a>
                     </div>
                 </div>
             </div>

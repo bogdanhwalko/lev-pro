@@ -14,8 +14,8 @@
                         <p class="mm-t5">Contrary to popular belief, Lorem simply random text. It has roots in a piece of classical Latin literature.</p>
                         <ul class="contact-info-bx">
                             <li><i class="ti-location-pin"></i><strong>Address</strong> 20 , New York 10010 </li>
-                            <li><i class="ti-mobile"></i><strong>Phone</strong> 0800-123456</li>
-                            <li><i class="ti-email"></i><strong>Email</strong> info@example.com</li>
+                            <li><i class="ti-mobile"></i><strong>Phone</strong> <?= Yii::$app->params['phoneSupport']?></li>
+                            <li><i class="ti-email"></i><strong>Email</strong> <?= Yii::$app->params['senderEmail']?></li>
                         </ul>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="dlab-post-info">
                                     <div class="dlab-post-header">
-                                        <h6 class="post-title"><a href="blog-single.html">Helping you and your house become better.</a></h6>
+                                        <h6 class="post-title"><a href="">Helping you and your house become better.</a></h6>
                                     </div>
                                     <div class="dlab-post-meta">
                                         <ul>
