@@ -4,9 +4,9 @@
 /** @var yii\bootstrap5\ActiveForm $form */
 /** @var app\models\ContactForm $model */
 
-use yii\bootstrap5\ActiveForm;
+use yii\widgets\ActiveForm;
 use yii\bootstrap5\Html;
-use yii\captcha\Captcha;
+use yii\widgets\Pjax;
 
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
@@ -61,63 +61,59 @@ $this->params['breadcrumbs'][] = $this->title;
                         </li>
                     </ul>
                 </div>
+
                 <div class="col-lg-8 col-md-12 m-b30">
-                    <form class="contact-box dzForm" action="script/contact.php">
-                        <h3 class="title-box">Write us a few words about your project and we’ll prepare a proposal for you within <strong>24</strong> hours</h3>
+                    <?php $form = ActiveForm::begin([
+                        'method' => 'post',
+                        'enableAjaxValidation' => true,
+                        'options' => ['class' => 'contact-box'],
+                        'fieldConfig' => [
+                            'template' => "<div class=\"form-group\"><div class=\"input-group\">{input}\n</div><div class=\"text-danger\">{error}</div></div>",
+                        ],
+                    ]); ?>
+                        <h3
+                            class="title-box">Write us a few words about your project and we’ll prepare a proposal for you within <strong>24</strong> hours
+                        </h3>
                         <div class="dzFormMsg m-b20"></div>
-                        <input type="hidden" value="Contact" name="dzToDo" >
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <input name="dzFirstName" type="text" required class="form-control" placeholder="First Name">
-                                    </div>
-                                </div>
+                                <?= $form->field($model, 'firstName')
+                                    ->textInput(['maxlength' => true, 'placeholder' => 'First Name'])
+                                    ->label(false);
+                                ?>
                             </div>
                             <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <input name="dzLastName" type="text" required class="form-control" placeholder="Last Name">
-                                    </div>
-                                </div>
+                                <?= $form->field($model, 'lastName')
+                                    ->textInput(['maxlength' => true, 'placeholder' => 'Last Name'])
+                                    ->label(false);
+                                ?>
                             </div>
                             <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <input name="dzOther[Phone]" type="text" required class="form-control" placeholder="Phone">
-                                    </div>
-                                </div>
+                                <?= $form->field($model, 'phone')
+                                    ->textInput(['maxlength' => true, 'placeholder' => 'Phone'])
+                                    ->label(false);
+                                ?>
                             </div>
                             <div class="col-lg-6 col-md-12">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <input name="dzEmail" type="email" class="form-control" required  placeholder="Your Email Id" >
-                                    </div>
-                                </div>
+                                <?= $form->field($model, 'email')
+                                    ->textInput(['maxlength' => true, 'placeholder' => 'Your Email Id'])
+                                    ->label(false);
+                                ?>
                             </div>
                             <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <textarea name="dzMessage" rows="4" class="form-control" required placeholder="Tell us about your project or idea"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <div class="g-recaptcha" data-sitekey="<!-- Put reCaptcha Site Key -->" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-                                        <input class="form-control d-none" style="display:none;" data-recaptcha="true" required data-error="Please complete the Captcha">
-                                    </div>
-                                </div>
+                                <?= $form->field($model, 'message')
+                                    ->textarea(['placeholder' => 'Tell us about your project or idea', 'rows' => 4])
+                                    ->label(false);
+                                ?>
                             </div>
                             <div class="col-lg-12 col-md-12">
-                                <button name="submit" type="submit" value="Submit" class="site-button align-self-center ml-auto button-style-2 primary">
-                                    <span>Get A Free Quote!</span>
-                                    <i class="la la-long-arrow-alt-right"></i>
-                                </button>
+                                <?= Html::submitButton(
+                                    '<span>Get A Free Quote!</span><i class="la la-long-arrow-alt-right"></i>',
+                                    ['class' => 'site-button align-self-center ml-auto button-style-2 primary']
+                                ); ?>
                             </div>
                         </div>
-                    </form>
+                    <?php ActiveForm::end(); ?>
                 </div>
             </div>
         </div>

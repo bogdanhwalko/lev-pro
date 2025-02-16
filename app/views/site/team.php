@@ -71,7 +71,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.8s">
                 <div class="dlab-box m-b30 dlab-team9">
-                    <div class="dlab-media dlab-media-right">
+                    <div class="dlab-media dlab-media-right"> 
                         <a href="javascript:void(0);">
                             <img alt="" src="images/our-team/pic6.jpg">
                         </a>
