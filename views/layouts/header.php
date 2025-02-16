@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 ?>
 
@@ -30,8 +31,8 @@ use yii\helpers\Html;
             <div class="container clearfix">
                 <!-- website logo -->
                 <div class="logo-header mostion">
-                    <a href="index.html">
-                        <?= \yii\helpers\Html::img('@web/images/logo.png', ['alt' => ""]); ?>
+                    <a href="<?=Yii::$app->homeUrl?>">
+                        <?= Html::img('@web/images/logo.png', ['alt' => ""]); ?>
                     </a>
                 </div>
                 <!-- nav toggle button -->
@@ -43,7 +44,7 @@ use yii\helpers\Html;
                 <!-- extra nav -->
                 <div class="extra-nav">
                     <div class="extra-cell">
-                        <a href="contact.html" class="site-button align-self-center ml-auto button-style-2 primary">
+                        <a href="<?= Url::to('contact'); ?>" class="site-button align-self-center ml-auto button-style-2 primary">
                             <span>Get in Touch</span>
                             <i class="la la-long-arrow-alt-right"></i>
                         </a>
@@ -64,15 +65,7 @@ use yii\helpers\Html;
                         </a>
                     </div>
                     <ul class="nav navbar-nav navbar">
-                        <li><a href="#home" class="scroll nav-link active">Home <i class="fa fa-chevron-down"></i></a>
-                            <ul class="sub-menu">
-                                <li><a href="01-index-construction.html">Home construction</a></li>
-                                <li><a href="02-index-food-factory.html">Home Food Industry</a></li>
-                                <li><a href="03-index-agriculture.html">Home Agriculture</a></li>
-                                <li><a href="04-index-steel-plant.html">Home Steel Plant</a></li>
-                                <li><a href="05-index-solar-plant.html">Home Solar Plant</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="#home" class="scroll nav-link active">Home</a></li>
                         <li><a href="#about-us" class="scroll nav-link">About Us</a></li>
                         <li><a href="#services" class="scroll nav-link">Services</a></li>
                         <li><a href="#projects" class="scroll nav-link">Projects</a></li>
