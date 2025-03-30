@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <li>
                             <i class="fa fa-map-marker"></i>
                             <h4 class="title">Address</h4>
-                            <p>123 West Street, Melbourne Victoria 3000 Australia</p>
+                            <p><?= Yii::$app->params['address']; ?></p>
                         </li>
                         <li>
                             <i class="fa fa-envelope-o"></i>

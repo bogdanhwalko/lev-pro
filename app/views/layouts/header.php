@@ -69,7 +69,6 @@ use yii\helpers\Url;
                         <li><a href="#about-us" class="scroll nav-link">About Us</a></li>
                         <li><a href="#services" class="scroll nav-link">Services</a></li>
                         <li><a href="#projects" class="scroll nav-link">Projects</a></li>
-                        <li><a href="#team" class="scroll nav-link">Team</a></li>
                         <li><a href="#client" class="scroll nav-link">Client Says</a></li>
                         <li><a href="#blog" class="scroll nav-link">Blog</a></li>
                     </ul>

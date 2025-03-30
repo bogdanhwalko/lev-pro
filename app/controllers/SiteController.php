@@ -80,4 +80,10 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
+
+    public function actionPainting()
+    {
+        return $this->render('painting');
+    }
 }

@@ -1,3 +1,8 @@
+<?php
+use yii\helpers\Url;
+
+?>
+
 <!-- Slider -->
 <div class="main-slider style-two default-banner" id="home">
     <div class="tp-banner-container">
@@ -141,10 +146,10 @@
                                            data-paddingbottom="[0,0,0,0]"
                                            data-paddingleft="[0,0,0,0]"
                                            style="z-index: 13; white-space: normal; display:inline-block;">
-                                            <div class="site-button primary align-self-center ml-auto button-style-2">
-                                                <span>READ MORE</span>
+                                            <a href="<?= Url::to('contact'); ?>" class="site-button primary align-self-center ml-auto button-style-2">
+                                                <span>GET IN TOUCH</span>
                                                 <i class="la la-long-arrow-alt-right"></i>
-                                            </div>
+                                            </a>
                                         </a>
                                     </div>
                                 </div>
@@ -286,10 +291,10 @@
                                            data-paddingbottom="[0,0,0,0]"
                                            data-paddingleft="[0,0,0,0]"
                                            style="z-index: 13; white-space: normal; display:inline-block;">
-                                            <div class="site-button primary align-self-center ml-auto button-style-2">
-                                                <span>READ MORE</span>
+                                            <a href="<?= Url::to('contact'); ?>" class="site-button primary align-self-center ml-auto button-style-2">
+                                                <span>GET IN TOUCH</span>
                                                 <i class="la la-long-arrow-alt-right"></i>
-                                            </div>
+                                            </a>
                                         </a>
                                     </div>
                                 </div>
@@ -433,10 +438,10 @@
                                            data-paddingbottom="[0,0,0,0]"
                                            data-paddingleft="[0,0,0,0]"
                                            style="z-index: 13; white-space: normal; display:inline-block;">
-                                            <div class="site-button primary align-self-center ml-auto button-style-2">
-                                                <span>READ MORE</span>
+                                            <a href="<?= Url::to('contact'); ?>" class="site-button primary align-self-center ml-auto button-style-2">
+                                                <span>GET IN TOUCH</span>
                                                 <i class="la la-long-arrow-alt-right"></i>
-                                            </div>
+                                            </a>
                                         </a>
                                     </div>
                                 </div>

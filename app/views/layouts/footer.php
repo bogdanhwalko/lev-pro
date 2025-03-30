@@ -13,7 +13,7 @@
                         </div>
                         <p class="mm-t5">Contrary to popular belief, Lorem simply random text. It has roots in a piece of classical Latin literature.</p>
                         <ul class="contact-info-bx">
-                            <li><i class="ti-location-pin"></i><strong>Address</strong> 20 , New York 10010 </li>
+                            <li><i class="ti-location-pin"></i><strong>Address</strong> <?= Yii::$app->params['address']?></li>
                             <li><i class="ti-mobile"></i><strong>Phone</strong> <?= Yii::$app->params['phoneSupport']?></li>
                             <li><i class="ti-email"></i><strong>Email</strong> <?= Yii::$app->params['senderEmail']?></li>
                         </ul>
