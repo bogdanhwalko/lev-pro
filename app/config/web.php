@@ -11,6 +11,7 @@ $config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+        '@images'   => '@app/../public_html/images',
     ],
     'components' => [
         'request' => [
@@ -47,7 +48,10 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'contact' => 'site/contact'
+                '/' => 'site/index',
+                'contact' => 'site/contact',
+                'gallery/<id:[\w-]+>' => 'gallery/index',
+                //'contact' => 'site/contact',
             ],
         ],
     ],

@@ -30,11 +30,11 @@
                         <div class="widget-post-bx">
                             <div class="widget-post clearfix">
                                 <div class="dlab-post-media">
-                                    <img src="images/blog/recent-blog/pic1.jpg" width="200" height="143" alt="">
+                                    <img src="/images/blog/1.webp" width="200" height="143" alt="">
                                 </div>
                                 <div class="dlab-post-info">
                                     <div class="dlab-post-header">
-                                        <h6 class="post-title"><a href="">Helping you and your house become better.</a></h6>
+                                        <h6 class="post-title"><a href="javascript:void(0);">Technique of applying primer paint</a></h6>
                                     </div>
                                     <div class="dlab-post-meta">
                                         <ul>
@@ -46,11 +46,11 @@
                             </div>
                             <div class="widget-post clearfix">
                                 <div class="dlab-post-media">
-                                    <img src="images/blog/recent-blog/pic2.jpg" width="200" height="160" alt="">
+                                    <img src="/images/blog/2.webp" width="200" height="160" alt="">
                                 </div>
                                 <div class="dlab-post-info">
                                     <div class="dlab-post-header">
-                                        <h6 class="post-title"><a href="blog-single.html">Creating quality urban lifestyles.</a></h6>
+                                        <h6 class="post-title"><a href="javascript:void(0);">How to properly apply decorative plaster to walls?</a></h6>
                                     </div>
                                     <div class="dlab-post-meta">
                                         <ul>
@@ -72,11 +72,11 @@
                             </div>
                         </div>
                         <ul class="mm-t10">
-                            <li><a href="javascript:void(0);">About Us</a></li>
-                            <li><a href="blog-list-1.html">Blog</a></li>
-                            <li><a href="javascript:void(0);">Services</a></li>
-                            <li><a href="javascript:void(0);">Privacy Policy</a></li>
-                            <li><a href="javascript:void(0);">Projects </a></li>
+                            <li><a href="/#home">Home</a></li>
+                            <li><a href="/#about-us">About Us</a></li>
+                            <li><a href="/#services">Services</a></li>
+                            <li><a href="/#projects">Projects</a></li>
+                            <li><a href="/#client">Client Says </a></li>
                         </ul>
                     </div>
                 </div>
@@ -107,11 +107,11 @@
                 <div class="col-md-6 col-sm-6 text-left "> <span>Copyright © <?= date('Y'); ?> Lev Pro Construction</span> </div>
                 <div class="col-md-6 col-sm-6 text-right ">
                     <div class="widget-link ">
-                        <ul>
-                            <li><a href="javascript:void(0);"> About</a></li>
-                            <li><a href="javascript:void(0);"> Help Desk</a></li>
-                            <li><a href="javascript:void(0);"> Privacy Policy</a></li>
-                        </ul>
+<!--                        <ul>-->
+<!--                            <li><a href="javascript:void(0);"> About</a></li>-->
+<!--                            <li><a href="javascript:void(0);"> Help Desk</a></li>-->
+<!--                            <li><a href="javascript:void(0);"> Privacy Policy</a></li>-->
+<!--                        </ul>-->
                     </div>
                 </div>
             </div>

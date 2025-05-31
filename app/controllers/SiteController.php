@@ -56,6 +56,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        //Yii::$app->session->set('mode', 'dev');
+//        if (Yii::$app->session->get('mode', 'user') !== 'dev') {
+//            echo '<center><h1>The site is under development!</h1></center>'; exit();
+//        }
+
         return $this->render('index');
     }
 
@@ -79,11 +84,5 @@ class SiteController extends Controller
         return $this->render('contact', [
             'model' => $model,
         ]);
-    }
-
-
-    public function actionPainting()
-    {
-        return $this->render('painting');
     }
 }

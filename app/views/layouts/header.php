@@ -17,11 +17,11 @@ use yii\helpers\Url;
                     </ul>
                 </div>
                 <div class="dlab-topbar-right">
-                    <ul>
-                        <li><a href="javascript:void(0);">About Us</a></li>
-                        <li><a href="javascript:void(0);">Refund Policy</a></li>
-                        <li><a href="javascript:void(0);">Help Desk</a></li>
-                    </ul>
+<!--                    <ul>-->
+<!--                        <li><a href="javascript:void(0);">About Us</a></li>-->
+<!--                        <li><a href="javascript:void(0);">Refund Policy</a></li>-->
+<!--                        <li><a href="javascript:void(0);">Help Desk</a></li>-->
+<!--                    </ul>-->
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@ use yii\helpers\Url;
                 <!-- website logo -->
                 <div class="logo-header mostion">
                     <a href="<?=Yii::$app->homeUrl?>">
-                        <?= Html::img('@web/images/logo.png', ['alt' => ""]); ?>
+                        <?= Html::img('@web/images/logo99.png', ['alt' => ""]); ?>
                     </a>
                 </div>
                 <!-- nav toggle button -->
@@ -42,14 +42,16 @@ use yii\helpers\Url;
                     <span></span>
                 </button>
                 <!-- extra nav -->
-                <div class="extra-nav">
-                    <div class="extra-cell">
-                        <a href="<?= Url::to('contact'); ?>" class="site-button align-self-center ml-auto button-style-2 primary">
-                            <span>Get in Touch</span>
-                            <i class="la la-long-arrow-alt-right"></i>
-                        </a>
+                <?php if (Yii::$app->controller->action->id !== 'contact'): ?>
+                    <div class="extra-nav">
+                        <div class="extra-cell">
+                            <a href="<?= Url::to('contact'); ?>" class="site-button align-self-center ml-auto button-style-2 primary">
+                                <span>Get in Touch</span>
+                                <i class="la la-long-arrow-alt-right"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                <?php endif; ?>
                 <!-- Quik search -->
                 <div class="dlab-quik-search ">
                     <form action="#">
@@ -65,12 +67,11 @@ use yii\helpers\Url;
                         </a>
                     </div>
                     <ul class="nav navbar-nav navbar">
-                        <li><a href="#home" class="scroll nav-link active">Home</a></li>
-                        <li><a href="#about-us" class="scroll nav-link">About Us</a></li>
-                        <li><a href="#services" class="scroll nav-link">Services</a></li>
-                        <li><a href="#projects" class="scroll nav-link">Projects</a></li>
-                        <li><a href="#client" class="scroll nav-link">Client Says</a></li>
-                        <li><a href="#blog" class="scroll nav-link">Blog</a></li>
+                        <li><?= Html::a('Home', '/#home', ['class' => 'nav-link']) ?></li>
+                        <li><?= Html::a('About Us', '/#about-us', ['class' => 'nav-link']) ?></li>
+                        <li><?= Html::a('Services', '/#services', ['class' => 'nav-link']) ?></li>
+                        <li><?= Html::a('Projects', '/#projects', ['class' => 'nav-link']) ?></li>
+                        <li><?= Html::a('Client Says', '/#client', ['class' => 'nav-link']) ?></li>
                     </ul>
                     <div class="dlab-social-icon ind-social">
                         <ul>

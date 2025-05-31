@@ -119,7 +119,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
     <div class="section-full bg-gray">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227748.3825624477!2d75.65046970649679!3d26.88544791796718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1500819483219" class="radius-sm" style="border:0; width:100%; vertical-align:middle; min-height:350px;" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2683.6653495830715!2d-122.16857072359993!3d47.72974387120141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54900dbf2fac246f%3A0x4b0e78bf02b60d54!2zMTQyNTggMTMwdGggUGwgTkUsIEtpcmtsYW5kLCBXQSA5ODAzNCwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1748690501319!5m2!1sru!2sua"class="radius-sm" style="border:0; width:100%; vertical-align:middle; min-height:350px;" allowfullscreen></iframe>
     </div>
     <!-- Contact Form END -->
     <!-- Blog End -->

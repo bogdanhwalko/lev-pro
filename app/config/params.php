@@ -8,4 +8,8 @@ return [
     'phoneSupport' => '4255487789',
     'telegramChatId' => '586215417',
     'address' => '14258 130th Pl NE Kirkland Wa 98034',
+    'gallery-folder' => [
+        'painting',
+        'siding'
+    ]
 ];
