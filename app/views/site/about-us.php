@@ -7,14 +7,14 @@
                         <p>Since 1st April 2025</p>
                     </div>
                     <div class="about-img-one">
-                        <img src="images/users/our-services/2-2.jpg" alt="">
+                        <img src="images/users/our-services/2-2.jpg" alt="" width="495">
                     </div>
                     <div class="about-img-two">
                         <img src="images/users/our-services/6-7.jpg" alt="">
                     </div>
                     <div class="about-img-three">
                         <div class="video-bx">
-                            <img src="images/users/our-services/for-video.jpg" alt="">
+                            <img src="images/users/our-services/for-video.jpeg" alt="" width="250px">
                         </div>
                     </div>
                 </div>

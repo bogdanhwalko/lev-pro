@@ -29,7 +29,7 @@
                     <a href="javascript:void(0);"> <img src="images/gallery/3.jpg" alt=""> </a>
                     <div class="overlay-bx">
                         <div class="port-box align-b">
-                            <h5 class="title"><a href="javascript:void(0)">Pressure washing</a></h5>
+                            <h5 class="title"><a href="javascript:void(0)">Siding</a></h5>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                     <a href="javascript:void(0);"> <img src="images/gallery/6.jpg"  alt=""> </a>
                     <div class="overlay-bx">
                         <div class="port-box align-b">
-                            <h5 class="title"><a href="javascript:void(0)">Gutters</a></h5>
+                            <h5 class="title"><a href="javascript:void(0)">Painting</a></h5>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                     <a href="javascript:void(0);"> <img src="images/gallery/5.jpg"  alt=""> </a>
                     <div class="overlay-bx">
                         <div class="port-box align-b">
-                            <h5 class="title"><a href="javascript:void(0)">Gutters</a></h5>
+                            <h5 class="title"><a href="javascript:void(0)">Painting</a></h5>
                         </div>
                     </div>
                 </div>

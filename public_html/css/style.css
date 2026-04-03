@@ -11359,6 +11359,7 @@ button.scroltop.style2:hover:after {
 		transform: rotate(360deg) scale(1.2);
 	}
 }
+
 .icon-bx-wraper:hover .icon-up img,
 .icon-bx-wraper:hover .icon-up i,
 .icon-up:hover i {
@@ -11366,6 +11367,7 @@ button.scroltop.style2:hover:after {
 	-moz-animation: toTopFromBottom 0.8s forwards;
 	animation: toTopFromBottom 0.8s forwards;
 }
+
 @-webkit-keyframes toTopFromBottom {
 	49% {
 		-webkit-transform: translateY(-100%);
