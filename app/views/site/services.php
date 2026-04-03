@@ -18,20 +18,6 @@ use yii\helpers\Url;
                 <div class="icon-bx-wraper services-box">
                     <div class="icon-content">
                         <div class="icon-lg m-b30">
-                            <a href="#" class="icon-cell icon-up"><img src="<?= Yii::getAlias('@images/icon/construct/pressure-washer2.png'); ?>" alt=""/></a>
-                        </div>
-                        <h3 class="dlab-tilte">Pressure Washing</h3>
-                        <p>The pressure washing service ensures deep cleaning of surfaces by removing dirt, mold, mildew, and other contaminants.</p>
-                        <a href="<?= Url::to(['gallery/pressure-washing']); ?>" class="site-button white align-self-center ml-auto half-btn">
-                            <span>Work Examples</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 p-lr0">
-                <div class="icon-bx-wraper services-box">
-                    <div class="icon-content">
-                        <div class="icon-lg m-b30">
                             <a href="#" class="icon-cell icon-up"><img src="<?= Yii::getAlias('@images/icon/construct/painting2.png'); ?>" alt=""/></a>
                         </div>
                         <h3 class="dlab-tilte">Painting</h3>
@@ -51,20 +37,6 @@ use yii\helpers\Url;
                         <h3 class="dlab-tilte">Siding</h3>
                         <p>This is a great way to enhance the appearance of your home, improve its protective qualities, and increase energy efficiency</p>
                         <a href="<?= Url::to(['gallery/siding']); ?>" class="site-button white align-self-center ml-auto half-btn">
-                            <span>Work Examples</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 p-lr0">
-                <div class="icon-bx-wraper services-box">
-                    <div class="icon-content">
-                        <div class="icon-lg m-b30">
-                            <a href="#" class="icon-cell icon-up"><img src="<?= Yii::getAlias('@images/icon/construct/gutters2.png'); ?>" alt=""/></a>
-                        </div>
-                        <h3 class="dlab-tilte">Gutters</h3>
-                        <p>Regular cleaning and maintenance help protect your home from leaks, water damage, and foundation issues</p>
-                        <a href="<?= Url::to(['gallery/gutters']); ?>" class="site-button white align-self-center ml-auto half-btn">
                             <span>Work Examples</span>
                         </a>
                     </div>
