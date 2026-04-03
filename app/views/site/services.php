@@ -19,7 +19,7 @@ use yii\helpers\Url;
                 <div class="icon-bx-wraper services-box">
                     <div class="icon-content">
                         <div class="m-b30 icon-cell icon-up">
-                            <img src="<?= Yii::getAlias('@images/users/our-services/painting.jpg') ?>" alt="Painting" class="img-thumbnail"/>
+                            <img src="images/users/our-services/painting.jpg" alt="Painting" class="img-thumbnail"/>
                         </div>
                         <h3 class="dlab-tilte">Painting</h3>
                         <p>The service painting covers a wide range of works related to preparation, selection of materials and application of paints</p>
@@ -33,7 +33,7 @@ use yii\helpers\Url;
                 <div class="icon-bx-wraper services-box">
                     <div class="icon-content">
                         <div class="m-b30 icon-cell icon-up">
-                            <img src="<?= Yii::getAlias('@images/users/our-services/siding.jpg') ?>" alt="Siding" class="img-thumbnail"/>
+                            <img src="images/users/our-services/siding.jpg" alt="Siding" class="img-thumbnail"/>
                         </div>
                         <h3 class="dlab-tilte">Siding</h3>
                         <p>This is a great way to enhance the appearance of your home, improve its protective qualities, and increase energy efficiency</p>
