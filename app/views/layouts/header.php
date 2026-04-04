@@ -74,13 +74,13 @@ use yii\helpers\Url;
                         <li><?= Html::a('Client Says', '/#client', ['class' => 'nav-link']) ?></li>
                     </ul>
                     <div class="dlab-social-icon ind-social">
-                        <ul>
-                            <li><a class="site-button-link facebook fa fa-facebook" href="javascript:void(0);"></a></li>
-                            <li><a class="site-button-link twitter fa fa-twitter" href="javascript:void(0);"></a></li>
-                            <li><a class="site-button-link linkedin fa fa-linkedin" href="javascript:void(0);"></a></li>
-                            <li><a class="site-button-link instagram fa fa-instagram" href="javascript:void(0);"></a></li>
-                        </ul>
-                        <p>2020 Tradezone</p>
+<!--                        <ul>-->
+<!--                            <li><a class="site-button-link facebook fa fa-facebook" href="javascript:void(0);"></a></li>-->
+<!--                            <li><a class="site-button-link twitter fa fa-twitter" href="javascript:void(0);"></a></li>-->
+<!--                            <li><a class="site-button-link linkedin fa fa-linkedin" href="javascript:void(0);"></a></li>-->
+<!--                            <li><a class="site-button-link instagram fa fa-instagram" href="javascript:void(0);"></a></li>-->
+<!--                        </ul>-->
+                        <p><?= date('Y'); ?> Lev Pro Construction</p>
                     </div>
                 </div>
             </div>

@@ -72,7 +72,7 @@
             </div>
         </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-4 col-12">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-6">
             <div class="dlab-box dlab-portfolio-bx">
                 <div class="dlab-media">
                     <a href="javascript:void(0);"> <img src="images/gallery/5.jpg"  alt=""> </a>
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-12">
             <div class="dlab-box dlab-portfolio-bx">
                 <div class="dlab-media">
                     <a href="javascript:void(0);"> <img src="images/gallery/7.jpg"  alt=""> </a>
