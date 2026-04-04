@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\forms\ContactForm;
 use app\models\LoginForm;
+use app\models\Project;
 
 class SiteController extends Controller
 {
@@ -80,6 +81,53 @@ class SiteController extends Controller
         }
 
         return $this->render('login', ['model' => $model]);
+    }
+
+    public function actionSitemap(): Response
+    {
+        $siteUrl    = rtrim(Yii::$app->params['siteUrl'], '/');
+        $categories = Yii::$app->params['gallery-folder'];
+        $today      = date('Y-m-d');
+
+        $urls = [
+            ['loc' => $siteUrl . '/',        'lastmod' => $today, 'changefreq' => 'weekly',  'priority' => '1.0'],
+            ['loc' => $siteUrl . '/contact', 'lastmod' => $today, 'changefreq' => 'monthly', 'priority' => '0.8'],
+        ];
+
+        foreach ($categories as $category) {
+            $lastProject = Project::find()
+                ->where(['category' => $category])
+                ->orderBy(['updated_at' => SORT_DESC])
+                ->one();
+
+            $urls[] = [
+                'loc'        => $siteUrl . '/gallery/' . $category,
+                'lastmod'    => $lastProject ? date('Y-m-d', $lastProject->updated_at) : $today,
+                'changefreq' => 'weekly',
+                'priority'   => '0.9',
+            ];
+        }
+
+        $xml = '<?xml version="1.0" encoding="UTF-8"?>' . "\n"
+             . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+
+        foreach ($urls as $url) {
+            $xml .= "  <url>\n"
+                  . '    <loc>'        . htmlspecialchars($url['loc'], ENT_XML1) . "</loc>\n"
+                  . '    <lastmod>'    . $url['lastmod']    . "</lastmod>\n"
+                  . '    <changefreq>' . $url['changefreq'] . "</changefreq>\n"
+                  . '    <priority>'   . $url['priority']   . "</priority>\n"
+                  . "  </url>\n";
+        }
+
+        $xml .= '</urlset>';
+
+        $response = Yii::$app->response;
+        $response->format = Response::FORMAT_RAW;
+        $response->headers->set('Content-Type', 'application/xml; charset=utf-8');
+        $response->content = $xml;
+
+        return $response;
     }
 
     public function actionLogout(): Response

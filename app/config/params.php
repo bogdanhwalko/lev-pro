@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'siteUrl'    => 'https://levproconstruction.com',
     'adminEmail' => 'admin@example.com',
     'senderEmail' => 'levproconstruction@gmail.com',
     'senderName' => 'Example.com mailer',
