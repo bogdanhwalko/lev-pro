@@ -10,10 +10,9 @@ $this->title = 'Вхід';
 $this->registerCssFile('/plugins/fontawesome/css/font-awesome.min.css');
 ?>
 
-<div style="min-height:80vh;display:flex;align-items:center;justify-content:center;padding:20px;background:#f4f6f9">
-    <div style="width:100%;max-width:380px">
-        <div class="card shadow-sm">
-            <div class="card-body p-4 p-md-5">
+<div style="width:100%;max-width:380px;padding:20px">
+    <div class="card shadow-sm">
+        <div class="card-body p-4">
                 <div class="text-center mb-4">
                     <i class="fa fa-shield fa-3x text-primary"></i>
                     <h4 class="mt-3 mb-0 fw-bold">Адмін-панель</h4>
@@ -43,8 +42,7 @@ $this->registerCssFile('/plugins/fontawesome/css/font-awesome.min.css');
                     ['class' => 'btn btn-primary w-100 btn-lg', 'name' => 'login-button', 'encode' => false]
                 ) ?>
 
-                <?php ActiveForm::end(); ?>
-            </div>
+            <?php ActiveForm::end(); ?>
         </div>
     </div>
 </div>

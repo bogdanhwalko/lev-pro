@@ -72,6 +72,8 @@ class SiteController extends Controller
             return $this->redirect(['/admin']);
         }
 
+        $this->layout = '/login-layout';
+
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->redirect(['/admin']);
