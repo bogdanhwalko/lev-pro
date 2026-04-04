@@ -66,14 +66,12 @@ $this->registerCss("
 
 ?>
 <div class="container bg-white" id="projects">
-    <div class="row">
-        <div class="col-lg-12 section-head text-center" style="padding-top: 40px;">
-            <h5 class="title-small">GALLERY &amp; EXAMPLE</h5>
-            <div class="dlab-separator-outer">
-                <div class="dlab-separator bg-primary style-skew"></div>
-            </div>
-            <h2 class="font-weight-700 m-b0"><?= Html::encode($title) ?></h2>
+    <div style="width:100%;text-align:center;padding:40px 0 20px">
+        <h5 class="title-small">GALLERY &amp; EXAMPLE</h5>
+        <div class="dlab-separator-outer">
+            <div class="dlab-separator bg-primary style-skew"></div>
         </div>
+        <h2 class="font-weight-700 m-b0"><?= Html::encode($title) ?></h2>
     </div>
     <div class="row spno">
         <?= FancyBox::widget([
