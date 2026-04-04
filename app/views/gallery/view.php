@@ -1,6 +1,25 @@
 <?php
 
-$this->title = str_replace('-', ' ', $title);
+$this->title = ucwords(str_replace('-', ' ', $title));
+
+$metaMap = [
+    'painting' => [
+        'description' => 'Browse LevPro Construction\'s painting projects. Professional interior and exterior painting in Kirkland, Bellevue, Redmond and greater Seattle area. Licensed & insured.',
+        'keywords'    => 'painting projects Kirkland WA, exterior painting examples Seattle, interior painting gallery, house painting contractor Bellevue, painting portfolio Washington',
+    ],
+    'siding' => [
+        'description' => 'Browse LevPro Construction\'s siding installation projects. Professional siding services in Kirkland, Bellevue, Redmond and greater Seattle area. Licensed & insured.',
+        'keywords'    => 'siding installation Kirkland WA, siding projects gallery Seattle, siding contractor Bellevue, house siding examples Washington, vinyl siding Redmond',
+    ],
+];
+
+$meta = $metaMap[$category] ?? [
+    'description' => 'Browse LevPro Construction project gallery — professional painting and siding services in Kirkland, WA and greater Seattle area.',
+    'keywords'    => 'LevPro Construction projects, painting siding gallery Kirkland WA',
+];
+
+$this->params['meta_description'] = $meta['description'];
+$this->params['meta_keywords']    = $meta['keywords'];
 
 use yii\helpers\Html;
 use newerton\fancybox3\FancyBox;

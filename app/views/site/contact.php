@@ -8,8 +8,11 @@ use yii\widgets\ActiveForm;
 use yii\bootstrap5\Html;
 use yii\widgets\Pjax;
 
-$this->title = 'Contact';
+$this->title = 'Contact Us';
 $this->params['breadcrumbs'][] = $this->title;
+
+$this->params['meta_description'] = 'Contact LevPro Construction for a free estimate. Professional painting and siding services in Kirkland, Bellevue, Redmond and the greater Seattle area. Call (425) 548-7789.';
+$this->params['meta_keywords']    = 'contact LevPro Construction, free painting estimate Kirkland, siding quote Seattle, painting contractor contact, free estimate Washington';
 ?>
 <header class="site-header mo-left construct-header header">
 <!-- Content -->

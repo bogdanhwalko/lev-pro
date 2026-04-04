@@ -4,7 +4,12 @@
 
 use yii\helpers\Url;
 
-$this->title = 'Lev Pro Construction';
+$this->title = 'LevPro Construction';
+
+$this->params['meta_description'] = 'LevPro Construction — professional painting and siding contractor in Kirkland, WA. Serving Bellevue, Redmond, Seattle area. Licensed & insured. Get a free estimate today!';
+$this->params['meta_keywords']    = 'painting contractor Kirkland WA, siding installation Seattle, exterior painting Bellevue, house painter Kirkland WA, siding contractor Redmond, LevPro Construction';
+$this->params['og_title']         = 'LevPro Construction — Painting & Siding in Kirkland, WA';
+$this->params['og_image']         = Yii::getAlias('@web/images/og-default.jpg');
 ?>
 
 <!-- Content -->
