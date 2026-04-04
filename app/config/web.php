@@ -52,6 +52,7 @@ $config = [
                 'contact' => 'site/contact',
                 'login' => 'site/login',
                 'logout' => 'site/logout',
+                'gallery/<id:[\w-]+>/more' => 'gallery/more',
                 'gallery/<id:[\w-]+>' => 'gallery/index',
 
                 'admin' => 'admin/index',
