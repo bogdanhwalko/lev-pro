@@ -131,7 +131,7 @@ function init_map() {
 }
 
 
-if($("#gmap_canvas").length > 1) {
+if($("#gmap_canvas").length > 0) {
 	google.maps.event.addDomListener(window, 'load', init_map);
 }
 

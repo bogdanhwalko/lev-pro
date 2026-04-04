@@ -15,12 +15,12 @@ $this->params['breadcrumbs'][] = $this->title;
 <!-- Content -->
 <div class="page-content bg-white">
     <!-- inner page banner -->
-    <div class="dlab-bnr-inr overlay-black-dark bg-pt contact-bnr" style="background-image:url(images/banner/bnr2.jpg);">
+    <div class="dlab-bnr-inr overlay-black-dark bg-pt contact-bnr" style="background-image:url(images/banner/three-men-with-drawing-discussing-construction-site.jpg);">
         <div class="container">
             <div class="dlab-bnr-inr-entry">
                 <div class="title">
-                    <h1 class="text-white">Contact Us</h1>
-                    <p>Looking for a design partner<br/> You found</p>
+                    <h1 class="text-white">Your dream Is our work</h1>
+                    <p>Your dream<br/> </p>
                 </div>
                 <!-- Breadcrumb row -->
                 <div class="breadcrumb-row">

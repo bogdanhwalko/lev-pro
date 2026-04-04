@@ -66,36 +66,6 @@ var TradeZone = function(){
 		$('.header').css('height', HeaderHeight);
 	}
 	
-	/* Load File ============ */
-	var dzTheme = function(){
-		 'use strict';
-		 var loadingImage = '<img src="images/loading.gif">';
-		 jQuery('.dzload').each(function(){
-		 var dzsrc =   siteUrl + $(this).attr('dzsrc');
-		  //jQuery(this).html(loadingImage);
-		 	jQuery(this).hide(function(){
-				jQuery(this).load(dzsrc, function(){
-					jQuery(this).fadeIn('slow');
-				}); 
-			})
-			
-		 });
-		 
-		
-		if(screenWidth <= 991 ){
-			jQuery('.navbar-nav > li > a, .sub-menu > li > a').unbind().on('click', function(e){
-				if(jQuery(this).parent().hasClass('open'))
-				{
-					jQuery(this).parent().removeClass('open');
-				}
-				else{
-					jQuery(this).parent().parent().find('li').removeClass('open');
-					jQuery(this).parent().addClass('open');
-				}
-			});
-		}
-	}
-	
 	/* Magnific Popup ============ */
 	var MagnificPopup = function(){
 		'use strict';	
@@ -294,12 +264,13 @@ var TradeZone = function(){
 	
 	/* handle Bootstrap Touch Spin ============ */
 	var handleBootstrapTouchSpin = function(){
-		jQuery("input[name='demo_vertical2']").TouchSpin({
-		  verticalbuttons: true,
-		  verticalupclass: 'ti-plus',
-		  verticaldownclass: 'ti-minus'
-		});
-		
+		if (jQuery.fn.TouchSpin) {
+			jQuery("input[name='demo_vertical2']").TouchSpin({
+			  verticalbuttons: true,
+			  verticalupclass: 'ti-plus',
+			  verticaldownclass: 'ti-minus'
+			});
+		}
 	}
 	
 	
@@ -438,12 +409,9 @@ jQuery(document).ready(function() {
     'use strict';
 	TradeZone.init();
 	
-	$('a[data-toggle="tab"]').on('click',function(){
-		// todo remove snippet on bootstrap v4
-		$('a[data-toggle="tab"]').on('click',function() {
-		  $($(this).attr('href')).show().addClass('show active').siblings().hide();
-		})
-	});	
+	$('a[data-toggle="tab"]').on('click', function() {
+		$($(this).attr('href')).show().addClass('show active').siblings().hide();
+	});
 
 	jQuery('.navicon').on('click',function(){
 		$(this).toggleClass('open');
@@ -452,8 +420,8 @@ jQuery(document).ready(function() {
 /* Document.ready END */
 
 /* Window Load START */
-jQuery(window).load(function () {
-	'use strict'; 
+jQuery(window).on('load', function () {
+	'use strict';
 	TradeZone.load();
 	setTimeout(function(){
 		jQuery('#loading-area').remove();

@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer class="site-footer">
-    <div class="footer-top"  style="background-image:url(images/pattern/pt15.png);">
+    <div class="footer-top"  style="background-image:url(/images/pattern/pt15.png);">
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-lg-3 col-md-6 col-5 col-sm-6 footer-col-4 col-12">

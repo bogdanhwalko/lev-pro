@@ -37,18 +37,17 @@ class AppAsset extends AssetBundle
 
 
         //'css/montserrat.css',
-        'https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap',
+        'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap',
         'plugins/revolution/revolution/css/revolution.min.css'
     ];
 
     public $js = [
-        'js/jquery.min.js',
         'plugins/wow/wow.js',
         'plugins/bootstrap/js/popper.min.js',
         'plugins/bootstrap/js/bootstrap.min.js',
         'plugins/bootstrap-select/bootstrap-select.min.js',
-        'plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js',
         'plugins/magnific-popup/magnific-popup.js',
+        'js/jquery-load-shim.js',
         'plugins/counter/waypoints-min.js',
         'plugins/counter/counterup.min.js',
         'plugins/imagesloaded/imagesloaded.js',
@@ -73,6 +72,7 @@ class AppAsset extends AssetBundle
     ];
 
     public $depends = [
-        FirstJsAsset::class
+        'yii\web\JqueryAsset',
+        FirstJsAsset::class,
     ];
 }

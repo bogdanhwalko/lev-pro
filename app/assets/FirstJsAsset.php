@@ -14,8 +14,5 @@ class FirstJsAsset extends AssetBundle
         'position' => \yii\web\View::POS_HEAD,
     ];
 
-    public $js = [
-        'js/html5shiv.min.js',
-        'js/respond.min.js',
-    ];
+    public $js = [];
 }
