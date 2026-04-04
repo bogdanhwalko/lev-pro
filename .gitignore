@@ -1,3 +1,6 @@
 /.idea
 /.idea
 .idea
+/docker/
+docker-compose.yml
+/public_html/images/projects

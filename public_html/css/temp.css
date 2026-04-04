@@ -8117,7 +8117,7 @@ HOME 5 Box Header
 	padding: 14px 25px;
     z-index: 1;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
 }
 .half-btn:after{
@@ -8396,7 +8396,7 @@ HOME 5 Box Header
 @media only screen and (min-width: 991px) {
 	.construct-header .header-nav .nav > li > a{
 		border: 0;
-		font-weight: 500;
+		font-weight: 600;
 		color: #000;
 		padding: 30px 15px 29px 15px;
 	}

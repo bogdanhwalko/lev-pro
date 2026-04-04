@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\forms\ContactForm;
+use app\models\LoginForm;
 
 class SiteController extends Controller
 {
@@ -64,6 +65,26 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+
+    public function actionLogin(): Response|string
+    {
+        if (!Yii::$app->user->isGuest) {
+            return $this->redirect(['/admin']);
+        }
+
+        $model = new LoginForm();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->redirect(['/admin']);
+        }
+
+        return $this->render('login', ['model' => $model]);
+    }
+
+    public function actionLogout(): Response
+    {
+        Yii::$app->user->logout();
+        return $this->redirect(['/']);
+    }
 
     /**
      * Displays contact page.

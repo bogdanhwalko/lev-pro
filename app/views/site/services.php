@@ -16,7 +16,7 @@ use yii\helpers\Url;
         <div class="row m-lr0">
 
             <div class="col-lg-6 col-md-6 p-lr0">
-                <div class="icon-bx-wraper services-box">
+                <div class="icon-bx-wraper services-box m-2">
                     <div class="icon-content">
                         <div class="m-b30 icon-cell icon-up">
                             <img src="images/users/our-services/painting.jpg" alt="Painting" class="img-thumbnail"/>
@@ -30,7 +30,7 @@ use yii\helpers\Url;
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 p-lr0">
-                <div class="icon-bx-wraper services-box">
+                <div class="icon-bx-wraper services-box m-2">
                     <div class="icon-content">
                         <div class="m-b30 icon-cell icon-up">
                             <img src="images/users/our-services/siding.jpg" alt="Siding" class="img-thumbnail"/>

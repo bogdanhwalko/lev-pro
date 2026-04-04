@@ -50,8 +50,17 @@ $config = [
             'rules' => [
                 '/' => 'site/index',
                 'contact' => 'site/contact',
+                'login' => 'site/login',
+                'logout' => 'site/logout',
                 'gallery/<id:[\w-]+>' => 'gallery/index',
-                //'contact' => 'site/contact',
+
+                'admin' => 'admin/index',
+                'admin/create' => 'admin/create',
+                'admin/update/<id:\d+>' => 'admin/update',
+                'admin/delete/<id:\d+>' => 'admin/delete',
+                'admin/photos/<id:\d+>' => 'admin/photos',
+                'admin/upload/<id:\d+>' => 'admin/upload',
+                'admin/delete-photo/<id:\d+>' => 'admin/delete-photo',
             ],
         ],
     ],

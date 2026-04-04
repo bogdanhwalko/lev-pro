@@ -2,40 +2,42 @@
 
 namespace app\controllers;
 
-use yii\helpers\FileHelper;
+use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use Yii;
+use app\models\Project;
 
 class GalleryController extends Controller
 {
     public function actionIndex(string $id)
     {
-        $path = \Yii::getAlias('@app/../public_html/images/users/'. $id);
-        if (! is_dir($path)) {
+        $projects = Project::find()
+            ->where(['category' => $id])
+            ->orderBy(['sort_order' => SORT_ASC, 'id' => SORT_ASC])
+            ->all();
+
+        if (empty($projects)) {
             throw new NotFoundHttpException();
         }
 
-        $images = FileHelper::findFiles($path, ['only' => ['*.jpg', '*.png']]);
-        $images = array_map(fn($img) => Yii::getAlias('@images/users/'. strtolower($id) . '/'. basename($img)), $images);
-
-        $projects = [
-            [
-                'id' => 1,
-                'name' => 'Проект 1',
-                'images' => array_slice($images, 0, 3),
-            ],
-            [
-                'id' => 2,
-                'name' => 'Проект 2',
-                'images' => array_slice($images, 3)
-            ]
-        ];
+        // Build projects array for the view
+        $projectsData = [];
+        foreach ($projects as $project) {
+            $images = $project->getImages();
+            $imageUrls = array_map(
+                fn($img) => $project->getImageUrl(basename($img)),
+                $images
+            );
+            $projectsData[] = [
+                'id'     => $project->id,
+                'name'   => $project->name,
+                'images' => $imageUrls,
+            ];
+        }
 
         return $this->render('view', [
-            'images' => $images,
-            'projects' => $projects,
-            'title' => strtoupper($id)
+            'projects' => $projectsData,
+            'title'    => strtoupper($id),
         ]);
     }
 }
