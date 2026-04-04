@@ -11,7 +11,7 @@
                                 <div class="dlab-separator bg-primary style-skew"></div>
                             </div>
                         </div>
-                        <p class="mm-t5">Contrary to popular belief, Lorem simply random text. It has roots in a piece of classical Latin literature.</p>
+                        <p class="mm-t5">We turn ideas into solid construction results. From planning to finishing, we focus on quality, safety, and detail.</p>
                         <ul class="contact-info-bx">
                             <li><i class="ti-location-pin"></i><strong>Address</strong> <?= Yii::$app->params['address']?></li>
                             <li><i class="ti-mobile"></i><strong>Phone</strong> <?= Yii::$app->params['phoneSupport']?></li>

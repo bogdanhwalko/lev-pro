@@ -19,8 +19,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="container">
             <div class="dlab-bnr-inr-entry">
                 <div class="title">
-                    <h1 class="text-white">Your dream Is our work</h1>
-                    <p>Your dream<br/> </p>
+                    <h1 class="text-white">Have a question?</h1>
+                    <p>Contact us for qualified consultation and clear professional guidance on any stage of your project.</p>
                 </div>
                 <!-- Breadcrumb row -->
                 <div class="breadcrumb-row">
