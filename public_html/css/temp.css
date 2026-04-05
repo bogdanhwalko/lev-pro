@@ -15,10 +15,36 @@
 .text-gray-dark {
     color: #9a9a9a;
 }
+/*=== Testimonials equal height ===*/
+.testimonial-box-carousel2 .owl-stage {
+    display: flex;
+}
+.testimonial-box-carousel2 .owl-item {
+    display: flex;
+}
+.testimonial-box-carousel2 .item {
+    display: flex;
+    flex: 1;
+}
+.testimonial-box-carousel2 .testimonial-box1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.testimonial-box-carousel2 .testimonial-text {
+    flex: 1;
+}
+
 /*=== Slider  ===*/
 .main-slider .button-lg{
 	padding: 15px 30px;
 }
+@media (max-width: 767px) {
+    .tp-leftarrow, .tp-rightarrow {
+        display: none !important;
+    }
+}
+
 #rev_slider_151_1 li::after {
     content: '';
     position: absolute;
