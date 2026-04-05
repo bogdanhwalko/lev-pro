@@ -92,7 +92,7 @@ use yii\helpers\Url;
                                              data-paddingright="[0,0,0,40]"
                                              data-paddingbottom="[0,0,0,0]"
                                              data-paddingleft="[0,0,0,40]"
-                                             style="z-index: 11; white-space: nowrap; font-size: 110px; line-height: 100px; font-weight: 600; color: #444444; display: inline-block;">
+                                             style="z-index: 11; white-space: nowrap; font-size: 110px; line-height: 100px; font-weight: 700; color: #ffba00; text-shadow: 2px 2px 6px rgba(0,0,0,0.5); display: inline-block;">
                                             Your dream <br/>Is our work
                                         </div>
                                         <!-- LAYER NR. 4 -->

@@ -45,7 +45,7 @@ use yii\helpers\Url;
                 <?php if (Yii::$app->controller->action->id !== 'contact'): ?>
                     <div class="extra-nav">
                         <div class="extra-cell">
-                            <a href="<?= Url::to('contact'); ?>" class="site-button align-self-center ml-auto button-style-2 primary">
+                            <a href="<?= Url::to('/contact') ?>" class="site-button align-self-center ml-auto button-style-2 primary">
                                 <span>Get in Touch</span>
                                 <i class="la la-long-arrow-alt-right"></i>
                             </a>
