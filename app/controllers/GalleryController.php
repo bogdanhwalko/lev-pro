@@ -16,10 +16,6 @@ class GalleryController extends Controller
     {
         $total = (int) Project::find()->where(['category' => $id])->count();
 
-        if ($total === 0) {
-            throw new NotFoundHttpException();
-        }
-
         $projects = Project::find()
             ->where(['category' => $id])
             ->orderBy(['sort_order' => SORT_ASC, 'id' => SORT_ASC])

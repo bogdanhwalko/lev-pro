@@ -108,6 +108,13 @@ $this->registerCss("
         ]) ?>
 
         <div id="projects-container" style="width:100%">
+            <?php if (empty($projects)): ?>
+                <div style="text-align:center; padding: 60px 20px 80px; width:100%;">
+                    <i class="fa fa-clock-o" style="font-size:48px; color:#ffba00; margin-bottom:20px; display:block;"></i>
+                    <h4 style="margin-bottom:10px;">Photos Are Being Processed</h4>
+                    <p style="color:#888; font-size:16px;">We're preparing the project photos. Please check back soon!</p>
+                </div>
+            <?php endif; ?>
             <?php foreach ($projects as $project): ?>
                 <div class="project-gallery-block">
                     <h3><?= Html::encode($project['name']) ?></h3>
