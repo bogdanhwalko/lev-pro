@@ -14288,9 +14288,189 @@ ol.commentlist li .star-rating {
 	.navstyle2 .main-bar.bg-primary .header-nav .nav > li:hover > a:after{
 		box-shadow: inset 0 0 0 2px #fff;
 	}
-	.navstyle3 .main-bar.bg-primary .header-nav .nav > li > a:after, 
+	.navstyle3 .main-bar.bg-primary .header-nav .nav > li > a:after,
 	.navstyle3 .main-bar.bg-primary .header-nav .nav > li.active > a:after{
 		background: #000;
 		opacity: 0.1;
 	}
 }
+
+/* ================================================
+   HERO SECTION (replaced Revolution Slider)
+   ================================================ */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../images/banner/civil-engineer-construction.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.45) 60%, rgba(255,186,0,0.15) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 120px 0 80px;
+}
+
+.hero-inner {
+    max-width: 720px;
+}
+
+.hero-tagline {
+    display: inline-block;
+    background: #ffba00;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(42px, 7vw, 88px);
+    font-weight: 700;
+    line-height: 1.05;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.hero-title span {
+    color: #ffba00;
+}
+
+.hero-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(16px, 2.2vw, 20px);
+    font-weight: 400;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 36px;
+    max-width: 560px;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+}
+
+.hero-link-secondary {
+    color: rgba(255,255,255,0.85);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.25s;
+}
+
+.hero-link-secondary i {
+    margin-right: 6px;
+}
+
+.hero-link-secondary:hover {
+    color: #ffba00;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stat strong {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffba00;
+    line-height: 1;
+}
+
+.hero-stat span {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    margin-top: 4px;
+}
+
+.hero-scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.hero-scroll-hint a {
+    color: rgba(255,255,255,0.6);
+    font-size: 18px;
+    display: block;
+    animation: heroScrollBounce 1.8s ease-in-out infinite;
+    transition: color 0.2s;
+}
+
+.hero-scroll-hint a:hover {
+    color: #ffba00;
+}
+
+@keyframes heroScrollBounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(8px); }
+}
+
+/* Hero responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 100px 0 60px;
+        text-align: center;
+    }
+    .hero-inner {
+        max-width: 100%;
+    }
+    .hero-actions {
+        justify-content: center;
+    }
+    .hero-stats {
+        justify-content: center;
+        gap: 28px;
+    }
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* ================================================
+   END HERO SECTION
+   ================================================ */
