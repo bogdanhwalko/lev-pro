@@ -14,7 +14,7 @@
                     </div>
                     <div class="about-img-three">
                         <div class="video-bx">
-                            <img src="images/users/our-services/for-video.jpeg" alt="" width="250px" loading="lazy">
+                            <img src="images/users/our-services/for-video.jpeg" alt="" width="250" height="188" loading="lazy" style="aspect-ratio:4/3;">
                         </div>
                     </div>
                 </div>

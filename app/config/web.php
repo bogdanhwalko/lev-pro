@@ -15,7 +15,8 @@ $config = [
     ],
     'components' => [
         'assetManager' => [
-            'appendTimestamp' => true,
+            // версія береться з params.php → 'assetVersion'
+            // щоб скинути кеш у всіх браузерів — змінити число там
         ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation

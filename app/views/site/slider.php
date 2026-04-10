@@ -7,9 +7,9 @@ use yii\helpers\Url;
 <div class="main-slider style-two default-banner" id="home">
     <div class="tp-banner-container">
         <div class="tp-banner" >
-            <div id="rev_slider_151_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="blur-effect-slider" data-source="gallery" style="background-color:#2d3032;padding:0px;">
+            <div id="rev_slider_151_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="blur-effect-slider" data-source="gallery" style="background-color:#2d3032;padding:0px;min-height:100vh;">
                 <!-- START REVOLUTION SLIDER 5.4.1 fullscreen mode -->
-                <div id="rev_slider_151_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.1">
+                <div id="rev_slider_151_1" class="rev_slider fullscreenbanner" style="display:none;min-height:100vh;" data-version="5.4.1">
                     <ul>	<!-- SLIDE  -->
                         <li data-index="rs-411" data-transition="fadethroughtransparent" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/main-slider/construct/slide1.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1000" data-fsslotamount="7" data-saveperformance="off"  data-title="One" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                             <!-- MAIN IMAGE -->

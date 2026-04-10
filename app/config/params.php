@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'assetVersion' => '1.0.1',
     'siteUrl'    => 'https://levproconstruction.com',
     'adminEmail' => 'admin@example.com',
     'senderEmail' => 'levproconstruction@gmail.com',

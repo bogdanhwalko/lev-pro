@@ -7,6 +7,7 @@
 
 namespace app\assets;
 
+use Yii;
 use yii\web\AssetBundle;
 
 /**
@@ -75,4 +76,18 @@ class AppAsset extends AssetBundle
         'yii\web\JqueryAsset',
         FirstJsAsset::class,
     ];
+
+    public function init(): void
+    {
+        parent::init();
+        $v = Yii::$app->params['assetVersion'] ?? '1';
+        $this->css = array_map(
+            static fn($f) => is_string($f) && !str_starts_with($f, 'http') ? "$f?v=$v" : $f,
+            $this->css
+        );
+        $this->js = array_map(
+            static fn($f) => is_string($f) ? "$f?v=$v" : $f,
+            $this->js
+        );
+    }
 }

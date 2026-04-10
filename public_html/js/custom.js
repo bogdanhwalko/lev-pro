@@ -404,11 +404,11 @@ var TradeZone = function(){
 	
 }();
 
-/* Document.ready Start */	
+/* Document.ready Start */
 jQuery(document).ready(function() {
     'use strict';
 	TradeZone.init();
-	
+
 	$('a[data-toggle="tab"]').on('click', function() {
 		$($(this).attr('href')).show().addClass('show active').siblings().hide();
 	});
@@ -416,6 +416,9 @@ jQuery(document).ready(function() {
 	jQuery('.navicon').on('click',function(){
 		$(this).toggleClass('open');
 	});
+
+	/* Remove loading screen as soon as DOM is ready — don't wait for all images */
+	jQuery('#loading-area').fadeOut(300, function(){ jQuery(this).remove(); });
 });
 /* Document.ready END */
 
@@ -423,9 +426,8 @@ jQuery(document).ready(function() {
 jQuery(window).on('load', function () {
 	'use strict';
 	TradeZone.load();
-	setTimeout(function(){
-		jQuery('#loading-area').remove();
-	}, 0);
+	/* Fallback: ensure loading screen is gone even if document.ready was missed */
+	jQuery('#loading-area').remove();
 });
 /*  Window Load END */
 /* Window Resize START */
