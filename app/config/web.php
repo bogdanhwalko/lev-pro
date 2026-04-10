@@ -14,6 +14,9 @@ $config = [
         '@images'   => '@app/../public_html/images',
     ],
     'components' => [
+        'assetManager' => [
+            'appendTimestamp' => true,
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'szpKF18YTFg7DqJ7b0mzxCZPMRZNWhuw',

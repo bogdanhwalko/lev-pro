@@ -7,14 +7,14 @@
                         <p>Since 1st April 2025</p>
                     </div>
                     <div class="about-img-one">
-                        <img src="images/users/our-services/2-2.jpg" alt="" width="495">
+                        <img src="images/users/our-services/2-2.jpg" alt="" width="495" loading="lazy">
                     </div>
                     <div class="about-img-two">
-                        <img src="images/users/our-services/6-7.jpg" alt="">
+                        <img src="images/users/our-services/6-7.jpg" alt="" loading="lazy">
                     </div>
                     <div class="about-img-three">
                         <div class="video-bx">
-                            <img src="images/users/our-services/for-video.jpeg" alt="" width="250px">
+                            <img src="images/users/our-services/for-video.jpeg" alt="" width="250px" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                                 <div class="about-inner-content">
                                     <h2 class="rotate-text">Painting</h2>
                                     <div class="m-b30">
-                                        <img src="images/logo99.png" alt="" width="50%">
+                                        <img src="images/logo99.png" alt="" width="50%" loading="lazy">
                                     </div>
                                     <h2 class="title">A Fresh Look for Your Home: Professional Painting Services</h2>
                                     <p class="m-b20">Dreaming of a refreshed interior or protecting your facade from the elements? Our team is ready to transform your walls and surfaces into a work of art!</p>
@@ -39,7 +39,7 @@
                                 <div class="about-inner-content">
                                     <h2 class="rotate-text">Siding</h2>
                                     <div class="m-b30">
-                                        <img src="images/logo99.png" alt="" width="50%">
+                                        <img src="images/logo99.png" alt="" width="50%" loading="lazy">
                                     </div>
                                     <h2 class="title">Modern Protection and Style for Your Home: Professional Siding Installation</h2>
                                     <p class="m-b20">Looking for a durable, aesthetic, and energy-efficient solution for your home's facade? Siding is the ideal choice, combining beauty with practicality.</p>

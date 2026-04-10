@@ -34,6 +34,8 @@ $this->registerLinkTag(['name' => 'format-detection', 'content' => 'telephone=no
 <html lang="<?= Yii::$app->language ?>" class="h-100">
     <head>
         <title><?= Html::encode($this->title . ' | LevPro Construction') ?></title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <?php $this->head() ?>
     </head>
     <body id="bg">

@@ -30,7 +30,7 @@
                         <div class="widget-post-bx">
                             <div class="widget-post clearfix">
                                 <div class="dlab-post-media">
-                                    <img src="/images/blog/1.webp" width="200" height="143" alt="">
+                                    <img src="/images/blog/1.webp" width="200" height="143" alt="" loading="lazy">
                                 </div>
                                 <div class="dlab-post-info">
                                     <div class="dlab-post-header">
@@ -46,7 +46,7 @@
                             </div>
                             <div class="widget-post clearfix">
                                 <div class="dlab-post-media">
-                                    <img src="/images/blog/2.webp" width="200" height="160" alt="">
+                                    <img src="/images/blog/2.webp" width="200" height="160" alt="" loading="lazy">
                                 </div>
                                 <div class="dlab-post-info">
                                     <div class="dlab-post-header">

@@ -14,7 +14,7 @@
         <div class="col-lg-3 col-md-4 col-sm-5 col-6">
             <div class="dlab-box dlab-portfolio-bx">
                 <div class="dlab-media">
-                    <a href="javascript:void(0);"> <img src="images/gallery/1.jpg" alt=""> </a>
+                    <a href="javascript:void(0);"> <img src="images/gallery/1.jpg" alt="" loading="lazy"> </a>
                     <div class="overlay-bx">
                         <div class="port-box align-b">
                             <h5 class="title"><a href="javascript:void(0)">Siding</a></h5>
@@ -26,7 +26,7 @@
         <div class="col-lg-6 col-md-8 col-sm-7 col-6">
             <div class="dlab-box dlab-portfolio-bx">
                 <div class="dlab-media">
-                    <a href="javascript:void(0);"> <img src="images/gallery/3.jpg" alt=""> </a>
+                    <a href="javascript:void(0);"> <img src="images/gallery/3.jpg" alt="" loading="lazy"> </a>
                     <div class="overlay-bx">
                         <div class="port-box align-b">
                             <h5 class="title"><a href="javascript:void(0)">Siding</a></h5>
@@ -38,7 +38,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
             <div class="dlab-box dlab-portfolio-bx">
                 <div class="dlab-media">
-                    <a href="javascript:void(0);"> <img src="images/gallery/2.jpg"  alt=""> </a>
+                    <a href="javascript:void(0);"> <img src="images/gallery/2.jpg" alt="" loading="lazy"> </a>
                     <div class="overlay-bx">
                         <div class="port-box align-b">
                             <h5 class="title"><a href="javascript:void(0)">Siding</a></h5>
@@ -50,7 +50,7 @@
         <div class="col-lg-3 col-md-4 col-sm-4 col-6">
             <div class="dlab-box dlab-portfolio-bx">
                 <div class="dlab-media">
-                    <a href="javascript:void(0);"> <img src="images/gallery/6.jpg"  alt=""> </a>
+                    <a href="javascript:void(0);"> <img src="images/gallery/6.jpg" alt="" loading="lazy"> </a>
                     <div class="overlay-bx">
                         <div class="port-box align-b">
                             <h5 class="title"><a href="javascript:void(0)">Painting</a></h5>
@@ -62,7 +62,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
             <div class="dlab-box dlab-portfolio-bx">
                 <div class="dlab-media">
-                    <a href="javascript:void(0);"> <img src="images/gallery/4.jpg"  alt=""> </a>
+                    <a href="javascript:void(0);"> <img src="images/gallery/4.jpg" alt="" loading="lazy"> </a>
                     <div class="overlay-bx">
                         <div class="port-box align-b">
                             <h5 class="title"><a href="javascript:void(0)">Painting</a></h5>
@@ -75,7 +75,7 @@
         <div class="col-lg-3 col-md-4 col-sm-4 col-6">
             <div class="dlab-box dlab-portfolio-bx">
                 <div class="dlab-media">
-                    <a href="javascript:void(0);"> <img src="images/gallery/5.jpg"  alt=""> </a>
+                    <a href="javascript:void(0);"> <img src="images/gallery/5.jpg" alt="" loading="lazy"> </a>
                     <div class="overlay-bx">
                         <div class="port-box align-b">
                             <h5 class="title"><a href="javascript:void(0)">Painting</a></h5>
@@ -87,7 +87,7 @@
         <div class="col-lg-3 col-md-4 col-sm-4 col-12">
             <div class="dlab-box dlab-portfolio-bx">
                 <div class="dlab-media">
-                    <a href="javascript:void(0);"> <img src="images/gallery/7.jpg"  alt=""> </a>
+                    <a href="javascript:void(0);"> <img src="images/gallery/7.jpg" alt="" loading="lazy"> </a>
                     <div class="overlay-bx">
                         <div class="port-box align-b">
                             <h5 class="title"><a href="javascript:void(0)">Painting</a></h5>

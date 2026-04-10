@@ -16,7 +16,7 @@
                         <div class="testimonial-box1">
                             <div class="testimonial-top">
                                 <div class="testimonial-pic radius">
-                                    <img src="images/client/client2.jpg" width="100" height="100" alt="">
+                                    <img src="images/client/client2.jpg" width="100" height="100" alt="" loading="lazy">
                                 </div>
                                 <div class="testimonial-detail">
                                     <strong class="testimonial-name">Sarah Johnson</strong>
@@ -42,7 +42,7 @@
                         <div class="testimonial-box1">
                             <div class="testimonial-top">
                                 <div class="testimonial-pic radius">
-                                    <img src="images/client/client1.jpg" width="100" height="100" alt="">
+                                    <img src="images/client/client1.jpg" width="100" height="100" alt="" loading="lazy">
                                 </div>
                                 <div class="testimonial-detail">
                                     <strong class="testimonial-name">George Carson</strong>
@@ -68,7 +68,7 @@
                         <div class="testimonial-box1">
                             <div class="testimonial-top">
                                 <div class="testimonial-pic radius">
-                                    <img src="images/client/client4.jpg" width="100" height="100" alt="">
+                                    <img src="images/client/client4.jpg" width="100" height="100" alt="" loading="lazy">
                                 </div>
                                 <div class="testimonial-detail">
                                     <strong class="testimonial-name">Michael Davis</strong>
@@ -94,7 +94,7 @@
                         <div class="testimonial-box1">
                             <div class="testimonial-top">
                                 <div class="testimonial-pic radius">
-                                    <img src="images/client/client3.jpg" width="100" height="100" alt="">
+                                    <img src="images/client/client3.jpg" width="100" height="100" alt="" loading="lazy">
                                 </div>
                                 <div class="testimonial-detail">
                                     <strong class="testimonial-name">Jacob Tucker</strong>
@@ -120,7 +120,7 @@
                         <div class="testimonial-box1">
                             <div class="testimonial-top">
                                 <div class="testimonial-pic radius">
-                                    <img src="images/client/client5.jpg" width="100" height="100" alt="">
+                                    <img src="images/client/client5.jpg" width="100" height="100" alt="" loading="lazy">
                                 </div>
                                 <div class="testimonial-detail">
                                     <strong class="testimonial-name">Jack Ronan</strong>
