@@ -14302,9 +14302,9 @@ ol.commentlist li .star-rating {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-image: url('../images/banner/f769fb62-722e-4994-a2fe-829df773d901.png');
+    background-image: url('../images/banner/1231.png');
     background-size: cover;
-    background-position: center center;
+    background-position: 80% 40%;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -14443,21 +14443,41 @@ ol.commentlist li .star-rating {
     50%       { transform: translateY(8px); }
 }
 
+/* Nudge the whole hero text block up on desktop */
+@media (min-width: 769px) {
+    .hero-content {
+        transform: translateY(-75px);
+    }
+}
+
 /* Hero responsive */
 @media (max-width: 768px) {
+    /* Mobile banner photo — swap the URL to use a different image than desktop */
+    .hero-section {
+        background-image: url('../images/banner/1237.png');
+        background-position: 70% center;
+        background-size: auto 100%;
+        background-color: #1a1a1a; /* fills the empty bands above/below the photo */
+        align-items: flex-start; /* push text up into the open sky area */
+    }
     .hero-content {
-        padding: 100px 0 60px;
+        padding: 90px 0 40px;
         text-align: center;
     }
     .hero-inner {
         max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 130px); /* fill viewport minus hero-content padding */
     }
     .hero-actions {
         justify-content: center;
+        margin-top: 7vh; /* sit a bit above the middle; remaining space goes below */
     }
     .hero-stats {
         justify-content: center;
         gap: 28px;
+        margin-top: auto; /* push rating block to the bottom */
     }
     .hero-subtitle {
         margin-left: auto;

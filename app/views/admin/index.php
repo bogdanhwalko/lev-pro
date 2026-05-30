@@ -1,15 +1,19 @@
 <?php
 /** @var yii\web\View $this */
-/** @var app\models\Project[] $projects */
+/** @var array $groups category => ['items' => app\models\Project[], 'pagination' => yii\data\Pagination] */
 
 use yii\helpers\Html;
 use yii\helpers\Url;
+use yii\widgets\LinkPager;
 
 $this->title = 'Проекти';
 
-$grouped = [];
-foreach ($projects as $project) {
-    $grouped[$project->category][] = $project;
+$hasProjects = false;
+foreach ($groups as $group) {
+    if (!empty($group['items'])) {
+        $hasProjects = true;
+        break;
+    }
 }
 ?>
 
@@ -22,7 +26,7 @@ foreach ($projects as $project) {
     ) ?>
 </div>
 
-<?php if (empty($projects)): ?>
+<?php if (!$hasProjects): ?>
     <div class="card">
         <div class="card-body text-center py-5 text-muted">
             <i class="fa fa-folder-open fa-3x d-block mb-3 text-secondary"></i>
@@ -32,9 +36,17 @@ foreach ($projects as $project) {
     </div>
 
 <?php else: ?>
-    <?php foreach ($grouped as $category => $items): ?>
+    <?php foreach ($groups as $category => $group): ?>
+        <?php
+        $items = $group['items'];
+        $pagination = $group['pagination'];
+        if (empty($items)) {
+            continue;
+        }
+        ?>
         <p class="text-uppercase text-muted fw-bold mb-2 mt-4" style="font-size:.75rem;letter-spacing:.06em">
             <i class="fa fa-tag"></i> <?= Html::encode($category) ?>
+            <span class="text-muted fw-normal">(<?= $pagination->totalCount ?>)</span>
         </p>
 
         <!-- Desktop table -->
@@ -144,6 +156,18 @@ foreach ($projects as $project) {
                 </div>
             <?php endforeach; ?>
         </div>
+
+        <?php if ($pagination->pageCount > 1): ?>
+            <nav class="d-flex justify-content-center mb-3">
+                <?= LinkPager::widget([
+                    'pagination'       => $pagination,
+                    'options'          => ['class' => 'pagination pagination-sm mb-0'],
+                    'linkContainerOptions' => ['class' => 'page-item'],
+                    'linkOptions'      => ['class' => 'page-link'],
+                    'disabledListItemSubTagOptions' => ['tag' => 'a', 'class' => 'page-link'],
+                ]) ?>
+            </nav>
+        <?php endif; ?>
 
     <?php endforeach; ?>
 <?php endif; ?>

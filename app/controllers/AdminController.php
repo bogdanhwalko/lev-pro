@@ -10,6 +10,7 @@ use yii\web\UploadedFile;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\helpers\FileHelper;
+use yii\data\Pagination;
 use app\models\Project;
 
 class AdminController extends Controller
@@ -41,11 +42,37 @@ class AdminController extends Controller
 
     public function actionIndex(): string
     {
-        $projects = Project::find()
-            ->orderBy(['category' => SORT_ASC, 'sort_order' => SORT_ASC, 'id' => SORT_ASC])
-            ->all();
+        $perPage = 10;
 
-        return $this->render('index', ['projects' => $projects]);
+        $categories = Project::find()
+            ->select('category')
+            ->distinct()
+            ->orderBy(['category' => SORT_ASC])
+            ->column();
+
+        $groups = [];
+        foreach ($categories as $category) {
+            $query = Project::find()->where(['category' => $category]);
+
+            $pagination = new Pagination([
+                'totalCount' => (int) $query->count(),
+                'pageSize'   => $perPage,
+                'pageParam'  => 'page-' . $category,
+            ]);
+
+            $items = $query
+                ->orderBy(['sort_order' => SORT_ASC, 'id' => SORT_ASC])
+                ->offset($pagination->offset)
+                ->limit($pagination->limit)
+                ->all();
+
+            $groups[$category] = [
+                'items'      => $items,
+                'pagination' => $pagination,
+            ];
+        }
+
+        return $this->render('index', ['groups' => $groups]);
     }
 
     public function actionCreate(): Response|string
