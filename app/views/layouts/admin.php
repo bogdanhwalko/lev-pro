@@ -16,6 +16,7 @@ $this->registerCssFile('/plugins/fontawesome/css/font-awesome.min.css');
 
 $this->registerCsrfMetaTags();
 $actionId = Yii::$app->controller->action->id;
+$controllerId = Yii::$app->controller->id;
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -169,15 +170,15 @@ $actionId = Yii::$app->controller->action->id;
 
     <ul class="nav flex-column mt-1" style="padding:8px 0">
         <li>
-            <a class="nav-link <?= $actionId === 'index' ? 'active' : '' ?>"
+            <a class="nav-link <?= ($controllerId === 'admin') ? 'active' : '' ?>"
                href="<?= Url::to(['/admin/index']) ?>">
-                <i class="fa fa-folder-open"></i> Проекти
+                <i class="fa fa-folder-open"></i> Галерея
             </a>
         </li>
         <li>
-            <a class="nav-link <?= $actionId === 'create' ? 'active' : '' ?>"
-               href="<?= Url::to(['/admin/create']) ?>">
-                <i class="fa fa-plus-circle"></i> Новий проект
+            <a class="nav-link <?= ($controllerId === 'project') ? 'active' : '' ?>"
+               href="<?= Url::to(['/project/index']) ?>">
+                <i class="fa fa-clock-o"></i> Проекти
             </a>
         </li>
     </ul>

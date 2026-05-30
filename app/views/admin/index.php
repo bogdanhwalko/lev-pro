@@ -6,7 +6,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
 
-$this->title = 'Проекти';
+$this->title = 'Галерея';
 
 $hasProjects = false;
 foreach ($groups as $group) {
@@ -18,9 +18,9 @@ foreach ($groups as $group) {
 ?>
 
 <div class="d-flex justify-content-between align-items-center mb-3 gap-2">
-    <h5 class="mb-0 fw-bold">Список проектів</h5>
+    <h5 class="mb-0 fw-bold">Список галерей</h5>
     <?= Html::a(
-        '<i class="fa fa-plus"></i> Новий проект',
+        '<i class="fa fa-plus"></i> Нова галерея',
         ['/admin/create'],
         ['class' => 'btn btn-primary btn-sm', 'encode' => false]
     ) ?>
@@ -30,8 +30,8 @@ foreach ($groups as $group) {
     <div class="card">
         <div class="card-body text-center py-5 text-muted">
             <i class="fa fa-folder-open fa-3x d-block mb-3 text-secondary"></i>
-            <p class="mb-2">Проектів ще немає.</p>
-            <?= Html::a('Створіть перший проект', ['/admin/create'], ['class' => 'btn btn-primary']) ?>
+            <p class="mb-2">Галерей ще немає.</p>
+            <?= Html::a('Створіть першу галерею', ['/admin/create'], ['class' => 'btn btn-primary']) ?>
         </div>
     </div>
 
@@ -56,7 +56,7 @@ foreach ($groups as $group) {
                     <thead class="table-light" style="font-size:.82rem">
                         <tr>
                             <th style="width:72px"></th>
-                            <th>Назва проекту</th>
+                            <th>Назва галереї</th>
                             <th style="width:80px" class="text-center">Фото</th>
                             <th style="width:80px" class="text-center">Порядок</th>
                             <th style="width:150px"></th>
@@ -99,7 +99,7 @@ foreach ($groups as $group) {
                                         <?= Html::beginForm(['/admin/delete', 'id' => $project->id], 'post', ['style' => 'display:inline']) ?>
                                         <?= Html::submitButton('<i class="fa fa-trash"></i>', [
                                             'class' => 'btn btn-sm btn-outline-danger', 'title' => 'Видалити', 'encode' => false,
-                                            'data-confirm' => 'Видалити проект «' . Html::encode($project->name) . '» та всі його фото?',
+                                            'data-confirm' => 'Видалити галерею «' . Html::encode($project->name) . '» та всі її фото?',
                                         ]) ?>
                                         <?= Html::endForm() ?>
                                     </div>
@@ -148,7 +148,7 @@ foreach ($groups as $group) {
                             <?= Html::beginForm(['/admin/delete', 'id' => $project->id], 'post', ['style' => 'flex:1']) ?>
                             <?= Html::submitButton('<i class="fa fa-trash"></i> Видалити', [
                                 'class' => 'btn btn-sm btn-outline-danger w-100', 'encode' => false,
-                                'data-confirm' => 'Видалити проект «' . Html::encode($project->name) . '»?',
+                                'data-confirm' => 'Видалити галерею «' . Html::encode($project->name) . '»?',
                             ]) ?>
                             <?= Html::endForm() ?>
                         </div>

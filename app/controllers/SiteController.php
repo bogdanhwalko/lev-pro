@@ -11,6 +11,10 @@ use app\forms\ContactForm;
 use app\forms\QuickContactForm;
 use app\models\LoginForm;
 use app\models\Project;
+use app\models\WorkProject;
+use app\models\WorkProjectPost;
+use app\models\WorkProjectComment;
+use yii\web\NotFoundHttpException;
 
 class SiteController extends Controller
 {
@@ -36,6 +40,7 @@ class SiteController extends Controller
                 'actions' => [
                     'logout' => ['post'],
                     'quick-contact' => ['post'],
+                    'project-comment' => ['post'],
                 ],
             ],
         ];
@@ -162,7 +167,7 @@ class SiteController extends Controller
     /**
      * Handles the floating quick-contact widget (AJAX). Sends the message to Telegram.
      */
-    public function actionQuickContact(): Response
+    public function actionQuickContact(): array
     {
         Yii::$app->response->format = Response::FORMAT_JSON;
 
@@ -181,6 +186,65 @@ class SiteController extends Controller
         return [
             'success' => false,
             'errors'  => $model->getFirstErrors(),
+        ];
+    }
+
+    /**
+     * Public project page — timeline of posts (text + photos) with comments.
+     */
+    public function actionProject(string $slug): string
+    {
+        $project = WorkProject::find()->where(['slug' => $slug])->one();
+        if (!$project) {
+            throw new NotFoundHttpException('Project not found.');
+        }
+
+        return $this->render('project', [
+            'project' => $project,
+            'posts'   => $project->getPosts()->with('comments')->all(),
+        ]);
+    }
+
+    /**
+     * Public comment submit (AJAX). Posts a comment under a timeline post.
+     */
+    public function actionProjectComment(): array
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+
+        $postId = (int) Yii::$app->request->post('post_id');
+        $post = WorkProjectPost::findOne($postId);
+        if (!$post) {
+            return ['success' => false, 'message' => 'Post not found.'];
+        }
+
+        $project = $post->project;
+        if (!$project || !$project->comments_enabled) {
+            return ['success' => false, 'message' => 'Comments are disabled.'];
+        }
+
+        $model = new WorkProjectComment();
+        $model->load(Yii::$app->request->post(), '');
+        $model->post_id = $post->id;
+
+        if (!$model->validate()) {
+            return ['success' => false, 'errors' => $model->getFirstErrors()];
+        }
+
+        // honeypot tripped → pretend success, save nothing
+        if (!empty($model->website)) {
+            return ['success' => true, 'comment' => null];
+        }
+
+        $model->save(false);
+
+        return [
+            'success' => true,
+            'comment' => [
+                'author_name' => $model->author_name,
+                'body'        => $model->body,
+                'date'        => date('d.m.Y H:i', $model->created_at),
+            ],
         ];
     }
 }

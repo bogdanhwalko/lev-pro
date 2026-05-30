@@ -80,7 +80,7 @@ class AdminController extends Controller
         $model = new Project();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            Yii::$app->session->setFlash('success', 'Проект створено. Тепер завантажте фото.');
+            Yii::$app->session->setFlash('success', 'Галерею створено. Тепер завантажте фото.');
             return $this->redirect(['photos', 'id' => $model->id]);
         }
 
@@ -92,7 +92,7 @@ class AdminController extends Controller
         $model = $this->findProject($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            Yii::$app->session->setFlash('success', 'Проект оновлено.');
+            Yii::$app->session->setFlash('success', 'Галерею оновлено.');
             return $this->redirect(['index']);
         }
 
@@ -103,7 +103,7 @@ class AdminController extends Controller
     {
         $model = $this->findProject($id);
         $model->delete();
-        Yii::$app->session->setFlash('success', 'Проект видалено.');
+        Yii::$app->session->setFlash('success', 'Галерею видалено.');
         return $this->redirect(['index']);
     }
 
@@ -166,7 +166,7 @@ class AdminController extends Controller
     {
         $model = Project::findOne($id);
         if (!$model) {
-            throw new NotFoundHttpException('Проект не знайдено.');
+            throw new NotFoundHttpException('Галерею не знайдено.');
         }
         return $model;
     }
