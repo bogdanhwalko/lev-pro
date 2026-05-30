@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\forms\ContactForm;
+use app\forms\QuickContactForm;
 use app\models\LoginForm;
 use app\models\Project;
 
@@ -34,6 +35,7 @@ class SiteController extends Controller
                 'class' => VerbFilter::class,
                 'actions' => [
                     'logout' => ['post'],
+                    'quick-contact' => ['post'],
                 ],
             ],
         ];
@@ -155,5 +157,30 @@ class SiteController extends Controller
         return $this->render('contact', [
             'model' => $model,
         ]);
+    }
+
+    /**
+     * Handles the floating quick-contact widget (AJAX). Sends the message to Telegram.
+     */
+    public function actionQuickContact(): Response
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+
+        $model = new QuickContactForm();
+        // fields are posted with plain names (no form prefix) from the widget
+        if ($model->load(Yii::$app->request->post(), '') && $model->validate()) {
+            $ok = $model->contact();
+            return [
+                'success' => $ok,
+                'message' => $ok
+                    ? 'Thanks! Your message has been sent. We\'ll get back to you shortly.'
+                    : 'Sorry, the message could not be sent. Please try again or call us.',
+            ];
+        }
+
+        return [
+            'success' => false,
+            'errors'  => $model->getFirstErrors(),
+        ];
     }
 }

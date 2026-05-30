@@ -48,6 +48,8 @@ $this->registerLinkTag(['name' => 'format-detection', 'content' => 'telephone=no
             <?= $this->render('footer') ?>
         </div>
 
+        <?= $this->render('quick-contact') ?>
+
         <?php $this->endBody() ?>
     </body>
 </html>

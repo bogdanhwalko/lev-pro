@@ -55,6 +55,7 @@ $config = [
                 'sitemap.xml' => 'site/sitemap',
                 '/' => 'site/index',
                 'contact' => 'site/contact',
+                'quick-contact' => 'site/quick-contact',
                 'login' => 'site/login',
                 'logout' => 'site/logout',
                 'gallery/<id:[\w-]+>/more' => 'gallery/more',
